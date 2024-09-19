@@ -1,13 +1,11 @@
 import pandas as pd
 from transformers import AutoModel, AutoTokenizer
 import torch
-import utils
+import seq_utils
+import os
 
 def calculate_embeddings(sequence, model, tokenizer, model_type):
-    """Calculate various embeddings for a given sequence."""
-    inputs = tokenizer(
-        " ".join(sequence), return_tensors="pt", padding=True, truncation=True
-    )
+    inputs = tokenizer(" ".join(sequence), return_tensors="pt", padding=True, truncation=True)
     with torch.no_grad():
         if model_type == "protbert":
             outputs = model(**inputs)
@@ -29,9 +27,7 @@ def calculate_embeddings(sequence, model, tokenizer, model_type):
 
     # Weighted pooling
     weights = torch.linspace(0.1, 1.0, embeddings.size(1), device=embeddings.device)
-    weights = weights.unsqueeze(0).unsqueeze(
-        -1
-    )  # Add extra dimensions for broadcasting
+    weights = weights.unsqueeze(0).unsqueeze(-1)  # Add extra dimensions for broadcasting
     weighted_embedding = (embeddings * weights).mean(dim=1).squeeze().numpy()
 
     return {
@@ -43,7 +39,7 @@ def calculate_embeddings(sequence, model, tokenizer, model_type):
 
 
 def process_and_store_embeddings(df, model_name, embedding_df_path, model_type):
-    """Process and store multiple types of embeddings for sequences in the DataFrame."""
+
     model = AutoModel.from_pretrained(model_name, output_hidden_states=True)
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
@@ -53,24 +49,18 @@ def process_and_store_embeddings(df, model_name, embedding_df_path, model_type):
     else:
         embedding_df = pd.DataFrame(columns=["info", "sequence", "model_name"])
 
-
     for idx, row in df.iterrows():
         info = row["info"]
         sequence = row["sequence"]
 
         existing_row = embedding_df[
-            (embedding_df["info"] == info)
-            & (embedding_df["model_name"] == model_name)
-            ]
-
-        # if not existing_row.empty:
+            (embedding_df["info"] == info) & (embedding_df["model_name"] == model_name)
+        ]
 
         if not existing_row.empty and f"{model_type}_mean_embedding" in existing_row.columns:
-
             # Ensure the specific column has data
             if not existing_row[f"{model_type}_mean_embedding"].empty:
                 continue  # Skip if embeddings for this sequence already exist
-
 
         try:
             embeddings = calculate_embeddings(sequence, model, tokenizer, model_type)
@@ -80,9 +70,7 @@ def process_and_store_embeddings(df, model_name, embedding_df_path, model_type):
                 "model_name": model_name,
                 **embeddings,
             }
-            embedding_df = pd.concat(
-                [embedding_df, pd.DataFrame([new_row])], ignore_index=True
-            )
+            embedding_df = pd.concat([embedding_df, pd.DataFrame([new_row])], ignore_index=True)
 
         except Exception as e:
             print(f"Failed to process sequence {sequence} with error: {e}")
@@ -94,9 +82,16 @@ def process_and_store_embeddings(df, model_name, embedding_df_path, model_type):
     return merged_df
 
 
-df = utils.get_sequence_df(snakemake.input.generated_sequences, alignment=True)
+def main():
+    df = seq_utils.get_sequence_df(snakemake.input.generated_sequences, alignment=True)
 
-bert_model_name = "yarongef/DistilProtBert"
-bert_embedding_df_path = "./protbert_embeddings_NR.pkl"
+    # Set model name and output paths
+    bert_model_name = "yarongef/DistilProtBert"
+    bert_embedding_df_path = snakemake.output.embedding_csv
 
-embedding_df = process_and_store_embeddings(df, bert_model_name, snakemake.output.embedding_csv, model_type='protbert')
+    # Process and store embeddings
+    embedding_df = process_and_store_embeddings(df, bert_model_name, bert_embedding_df_path, model_type='protbert')
+
+
+if __name__ == "__main__":
+    main()

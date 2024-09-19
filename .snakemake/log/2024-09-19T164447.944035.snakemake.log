@@ -1,2 +1,0 @@
-SyntaxError in line 30 of /media/WorkingSpace/Gabe/test_protein_classifier/snakefile:
-Unexpected keyword interproscan_csv in rule definition (snakefile, line 30)
