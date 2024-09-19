@@ -47,9 +47,11 @@ def process_and_store_embeddings(df, model_name, embedding_df_path, model_type):
     if os.path.exists(embedding_df_path):
         embedding_df = pd.read_pickle(embedding_df_path)
     else:
-        print ('got to here')
-        embedding_df = pd.DataFrame(columns=["info", "sequence", "model_name"])
-
+        try:
+            embedding_df = pd.DataFrame(columns=["info", "sequence", "model_name"], dtype=object)
+        except Exception as e:
+            print(f"Error initializing DataFrame: {e}")
+            raise
     print ('now done')
 
     for idx, row in df.iterrows():
