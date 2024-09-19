@@ -1,0 +1,42 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+all                       1              1              1
+generate_mutations        3              1              1
+run_interproscan          3              1              1
+total                     7              1              1
+
+
+[Thu Sep 19 17:07:47 2024]
+rule generate_mutations:
+    input: data/NR4_NR1_ancestors_unaligned.fasta
+    output: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_1.fasta
+    jobid: 2
+    wildcards: dataset_name=NR4_NR1_ancestors_unaligned, rep=1
+    resources: tmpdir=/tmp
+
+[Thu Sep 19 17:07:48 2024]
+Finished job 2.
+1 of 7 steps (14%) done
+
+[Thu Sep 19 17:07:48 2024]
+rule run_interproscan:
+    input: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_1.fasta
+    output: workflows/NR4_NR1_ancestors_unaligned/interproscan/NR4_NR1_ancestors_unaligned_1.csv
+    jobid: 1
+    wildcards: dataset_name=NR4_NR1_ancestors_unaligned, rep=1
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 44 of /media/WorkingSpace/Gabe/test_protein_classifier/snakefile:
+Job Missing files after 5 seconds:
+workflows/NR4_NR1_ancestors_unaligned/interproscan/NR4_NR1_ancestors_unaligned_1.csv
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 1 completed successfully, but some output files are missing. 1
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /media/WorkingSpace/Gabe/test_protein_classifier/.snakemake/log/2024-09-19T170747.131497.snakemake.log

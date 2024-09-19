@@ -1,0 +1,8 @@
+Migrating .snakemake folder to new format...
+Migration complete
+Building DAG of jobs...
+Relative file path './data/NR4_NR1_ancestors.fasta' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './data/NR4_NR1_ancestors.fasta' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './data/NR4_NR1_ancestors.fasta' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Nothing to be done.
+Complete log: /media/WorkingSpace/Gabe/test_protein_classifier/.snakemake/log/2024-09-19T164233.525773.snakemake.log

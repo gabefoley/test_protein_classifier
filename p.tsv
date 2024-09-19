@@ -1,0 +1,59 @@
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PRINTS	PR00398	Steroid hormone receptor signature	48	69	1.8E-20	T	19-09-2024	IPR001723	Nuclear hormone receptor	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PRINTS	PR00398	Steroid hormone receptor signature	135	150	1.8E-20	T	19-09-2024	IPR001723	Nuclear hormone receptor	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PRINTS	PR00398	Steroid hormone receptor signature	193	210	1.8E-20	T	19-09-2024	IPR001723	Nuclear hormone receptor	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PRINTS	PR00398	Steroid hormone receptor signature	69	85	1.8E-20	T	19-09-2024	IPR001723	Nuclear hormone receptor	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	Pfam	PF00104	Ligand-binding domain of nuclear hormone receptor	33	217	2.6E-34	T	19-09-2024	IPR000536	Nuclear hormone receptor, ligand-binding domain	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	SUPERFAMILY	SSF48508	Nuclear receptor ligand-binding domain	2	235	5.24E-68	T	19-09-2024	IPR035500	Nuclear hormone receptor-like domain superfamily	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	ProSiteProfiles	PS51843	Nuclear receptor (NR) ligand-binding (LBD) domain profile.	1	234	59.894405	T	19-09-2024	IPR000536	Nuclear hormone receptor, ligand-binding domain	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	CDD	cd07348	NR_LBD_NGFI-B	1	237	4.8201E-173	T	19-09-2024	-	-	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	160	177	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	214	235	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	43	57	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	114	129	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	93	113	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	193	213	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	FunFam	G3DSA:1.10.565.10:FF:000008	Nuclear receptor subfamily 4 group A member 1	1	237	2.8E-135	T	19-09-2024	-	-	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PANTHER	PTHR24085	NUCLEAR HORMONE RECEPTOR	1	237	7.9E-121	T	19-09-2024	-	-	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PRINTS	PR01287	Orphan nuclear receptor NURR signature	27	43	6.8E-5	T	19-09-2024	IPR003073	Nuclear receptor subfamily 4 group A member 2	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	PRINTS	PR01287	Orphan nuclear receptor NURR signature	177	193	6.8E-5	T	19-09-2024	IPR003073	Nuclear receptor subfamily 4 group A member 2	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	SMART	SM00430	holi	47	205	1.2E-39	T	19-09-2024	IPR000536	Nuclear hormone receptor, ligand-binding domain	-	-
+N9923_NR4_N3282_NR1_1	fa1dae1f9096cc9ef1b1b355bcab1a4a	242	Gene3D	G3DSA:1.10.565.10	Retinoid X Receptor	1	238	3.8E-80	T	19-09-2024	IPR035500	Nuclear hormone receptor-like domain superfamily	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PRINTS	PR00398	Steroid hormone receptor signature	48	69	1.8E-20	T	19-09-2024	IPR001723	Nuclear hormone receptor	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PRINTS	PR00398	Steroid hormone receptor signature	135	150	1.8E-20	T	19-09-2024	IPR001723	Nuclear hormone receptor	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PRINTS	PR00398	Steroid hormone receptor signature	193	210	1.8E-20	T	19-09-2024	IPR001723	Nuclear hormone receptor	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PRINTS	PR00398	Steroid hormone receptor signature	69	85	1.8E-20	T	19-09-2024	IPR001723	Nuclear hormone receptor	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	CDD	cd07348	NR_LBD_NGFI-B	1	237	2.26097E-173	T	19-09-2024	-	-	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PANTHER	PTHR24085	NUCLEAR HORMONE RECEPTOR	1	237	7.0E-121	T	19-09-2024	-	-	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	Pfam	PF00104	Ligand-binding domain of nuclear hormone receptor	33	217	2.6E-34	T	19-09-2024	IPR000536	Nuclear hormone receptor, ligand-binding domain	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	160	177	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	214	235	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	43	57	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	114	129	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	93	113	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	193	213	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	ProSiteProfiles	PS51843	Nuclear receptor (NR) ligand-binding (LBD) domain profile.	1	234	59.967827	T	19-09-2024	IPR000536	Nuclear hormone receptor, ligand-binding domain	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	SUPERFAMILY	SSF48508	Nuclear receptor ligand-binding domain	2	235	5.64E-68	T	19-09-2024	IPR035500	Nuclear hormone receptor-like domain superfamily	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PRINTS	PR01287	Orphan nuclear receptor NURR signature	27	43	6.8E-5	T	19-09-2024	IPR003073	Nuclear receptor subfamily 4 group A member 2	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	PRINTS	PR01287	Orphan nuclear receptor NURR signature	177	193	6.8E-5	T	19-09-2024	IPR003073	Nuclear receptor subfamily 4 group A member 2	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	Gene3D	G3DSA:1.10.565.10	Retinoid X Receptor	1	238	2.9E-80	T	19-09-2024	IPR035500	Nuclear hormone receptor-like domain superfamily	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	SMART	SM00430	holi	47	205	1.2E-39	T	19-09-2024	IPR000536	Nuclear hormone receptor, ligand-binding domain	-	-
+N9923_NR4_N3282_NR1_0	ddc421bf28f2cd801bd81b713f8f8ad5	242	FunFam	G3DSA:1.10.565.10:FF:000008	Nuclear receptor subfamily 4 group A member 1	1	237	1.0E-135	T	19-09-2024	-	-	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PRINTS	PR00398	Steroid hormone receptor signature	48	69	1.8E-20	T	19-09-2024	IPR001723	Nuclear hormone receptor	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PRINTS	PR00398	Steroid hormone receptor signature	135	150	1.8E-20	T	19-09-2024	IPR001723	Nuclear hormone receptor	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PRINTS	PR00398	Steroid hormone receptor signature	193	210	1.8E-20	T	19-09-2024	IPR001723	Nuclear hormone receptor	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PRINTS	PR00398	Steroid hormone receptor signature	69	85	1.8E-20	T	19-09-2024	IPR001723	Nuclear hormone receptor	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	Pfam	PF00104	Ligand-binding domain of nuclear hormone receptor	33	217	2.6E-34	T	19-09-2024	IPR000536	Nuclear hormone receptor, ligand-binding domain	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	FunFam	G3DSA:1.10.565.10:FF:000008	Nuclear receptor subfamily 4 group A member 1	1	237	6.1E-135	T	19-09-2024	-	-	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PANTHER	PTHR24085	NUCLEAR HORMONE RECEPTOR	2	237	8.9E-121	T	19-09-2024	-	-	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	160	177	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	214	235	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	43	57	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	114	129	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	93	113	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PRINTS	PR01284	Orphan nuclear receptor (4A nuclear receptor) family signature	193	213	7.3E-68	T	19-09-2024	IPR003070	Nuclear receptor subfamily 4 group A member 1-3	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	SUPERFAMILY	SSF48508	Nuclear receptor ligand-binding domain	2	235	4.46E-68	T	19-09-2024	IPR035500	Nuclear hormone receptor-like domain superfamily	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	ProSiteProfiles	PS51843	Nuclear receptor (NR) ligand-binding (LBD) domain profile.	1	234	60.500126	T	19-09-2024	IPR000536	Nuclear hormone receptor, ligand-binding domain	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PRINTS	PR01287	Orphan nuclear receptor NURR signature	27	43	6.8E-5	T	19-09-2024	IPR003073	Nuclear receptor subfamily 4 group A member 2	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	PRINTS	PR01287	Orphan nuclear receptor NURR signature	177	193	6.8E-5	T	19-09-2024	IPR003073	Nuclear receptor subfamily 4 group A member 2	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	Gene3D	G3DSA:1.10.565.10	Retinoid X Receptor	1	238	4.5E-80	T	19-09-2024	IPR035500	Nuclear hormone receptor-like domain superfamily	-	-
+N9923_NR4_N3282_NR1_2	8ab10db01291c0674310c2819f53a1f1	242	SMART	SM00430	holi	47	205	1.2E-39	T	19-09-2024	IPR000536	Nuclear hormone receptor, ligand-binding domain	-	-

@@ -1,0 +1,83 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+all                       1              1              1
+generate_mutations        2              1              1
+run_interproscan          3              1              1
+total                     6              1              1
+
+
+[Thu Sep 19 17:17:18 2024]
+rule run_interproscan:
+    input: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_1.fasta
+    output: workflows/NR4_NR1_ancestors_unaligned/interproscan/NR4_NR1_ancestors_unaligned_1.csv
+    jobid: 1
+    wildcards: dataset_name=NR4_NR1_ancestors_unaligned, rep=1
+    resources: tmpdir=/tmp
+
+[Thu Sep 19 17:19:12 2024]
+Finished job 1.
+1 of 6 steps (17%) done
+
+[Thu Sep 19 17:19:12 2024]
+rule generate_mutations:
+    input: data/NR4_NR1_ancestors_unaligned.fasta
+    output: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_2.fasta
+    jobid: 4
+    wildcards: dataset_name=NR4_NR1_ancestors_unaligned, rep=2
+    resources: tmpdir=/tmp
+
+[Thu Sep 19 17:19:13 2024]
+Finished job 4.
+2 of 6 steps (33%) done
+
+[Thu Sep 19 17:19:13 2024]
+rule run_interproscan:
+    input: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_2.fasta
+    output: workflows/NR4_NR1_ancestors_unaligned/interproscan/NR4_NR1_ancestors_unaligned_2.csv
+    jobid: 3
+    wildcards: dataset_name=NR4_NR1_ancestors_unaligned, rep=2
+    resources: tmpdir=/tmp
+
+[Thu Sep 19 17:21:08 2024]
+Finished job 3.
+3 of 6 steps (50%) done
+
+[Thu Sep 19 17:21:08 2024]
+rule generate_mutations:
+    input: data/NR4_NR1_ancestors_unaligned.fasta
+    output: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_3.fasta
+    jobid: 6
+    wildcards: dataset_name=NR4_NR1_ancestors_unaligned, rep=3
+    resources: tmpdir=/tmp
+
+[Thu Sep 19 17:21:09 2024]
+Finished job 6.
+4 of 6 steps (67%) done
+
+[Thu Sep 19 17:21:09 2024]
+rule run_interproscan:
+    input: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_3.fasta
+    output: workflows/NR4_NR1_ancestors_unaligned/interproscan/NR4_NR1_ancestors_unaligned_3.csv
+    jobid: 5
+    wildcards: dataset_name=NR4_NR1_ancestors_unaligned, rep=3
+    resources: tmpdir=/tmp
+
+[Thu Sep 19 17:23:01 2024]
+Finished job 5.
+5 of 6 steps (83%) done
+
+[Thu Sep 19 17:23:01 2024]
+localrule all:
+    input: workflows/NR4_NR1_ancestors_unaligned/interproscan/NR4_NR1_ancestors_unaligned_1.csv, workflows/NR4_NR1_ancestors_unaligned/interproscan/NR4_NR1_ancestors_unaligned_2.csv, workflows/NR4_NR1_ancestors_unaligned/interproscan/NR4_NR1_ancestors_unaligned_3.csv
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Thu Sep 19 17:23:01 2024]
+Finished job 0.
+6 of 6 steps (100%) done
+Complete log: /media/WorkingSpace/Gabe/test_protein_classifier/.snakemake/log/2024-09-19T171718.483858.snakemake.log
