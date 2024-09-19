@@ -6,7 +6,7 @@ except KeyError:
 try:
     DATASET_PATH = config['dataset_path']
 except KeyError:
-    DATASET_PATH = 'data/'
+    DATASET_PATH = 'data'
 
 try:
     ALL_DATASET_NAMES = config['all_dataset_names']
@@ -52,13 +52,9 @@ rule run_interproscan:
         interproscan_dir=INTERPROSCAN_DIR
     shell:
         """
-        # Run interproscan with the provided input fasta and output tsv
         {params.interproscan_dir}/interproscan.sh \
         -i {input.generated_sequences} \
-        -f tsv -dp > {params.interproscan_dir}/{wildcards.dataset_name}_{wildcards.rep}.out
-
-        # Move the generated .tsv file from interproscan_dir to the final output location
-        mv {params.interproscan_dir}/{wildcards.dataset_name}_{wildcards.rep}.tsv {output.interproscan_csv}
+        -f tsv -bp {output.interproscan_csv}
         """
 
 rule generate_embeddings:

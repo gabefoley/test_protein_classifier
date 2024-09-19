@@ -2,6 +2,7 @@ from Bio import SeqIO
 from Bio.Seq import Seq, MutableSeq
 from Bio.SeqRecord import SeqRecord
 import random
+import snakemake
 
 
 def calculate_differences(seq1, seq2):
@@ -120,4 +121,4 @@ def generate_mutations(inputfile, outputfile, positions=None, seed=42):
 
 # generate_mutations('NR1_NR4_ancestors.fasta', 'testoutput.fasta')
 # generate_mutations('NR1_NR4_ancestors.fasta', 'testoutput.fasta', [0,1,2,3,4])
-generate_mutations(snakemake.input.fasta, snakemake.output.generated_sequences, [0,1,2,3,4,5,6,7])
+generate_mutations(snakemake.input.fasta, snakemake.output.generated_sequences, [0,1,2])
