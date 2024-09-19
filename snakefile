@@ -11,7 +11,7 @@ except KeyError:
 try:
     ALL_DATASET_NAMES = config['all_dataset_names']
 except KeyError:
-    ALL_DATASET_NAMES = ['NR4_NR1_ancestors']
+    ALL_DATASET_NAMES = ['NR4_NR1_ancestors_unaligned']
 
 try:
     INTERPROSCAN_DIR = config['interproscan_dir']
@@ -67,7 +67,7 @@ rule generate_embeddings:
     output:
         embedding_csv="workflows/{dataset_name}/embeddings/{dataset_name}_{rep}.csv",
     script:
-        "scripts/generate_sequences.py"
+        "scripts/generate_embeddings.py"
 
 rule run_blast:
     input:
