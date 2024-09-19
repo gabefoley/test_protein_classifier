@@ -6,7 +6,7 @@ except KeyError:
 try:
     DATASET_PATH = config['dataset_path']
 except KeyError:
-    DATASET_PATH = './data/'
+    DATASET_PATH = 'data/'
 
 try:
     ALL_DATASET_NAMES = config['all_dataset_names']
@@ -16,26 +16,27 @@ except KeyError:
 try:
     INTERPROSCAN_DIR = config['interproscan_dir']
 except KeyError:
-    INTERPROSCAN_DIR = '/media/WorkingSpace/Share/interproscan/interproscan-5.65-97.0/'
+    INTERPROSCAN_DIR = '/media/WorkingSpace/Share/interproscan/interproscan-5.65-97.0'
 
 
 rule all:
     input:
+        interproscan_csv = expand("workflows/{dataset_name}/interproscan/{dataset_name}_{rep}.csv",
+        dataset_name=ALL_DATASET_NAMES,
+        rep=range(1, NUM_REPLICATES + 1),
+        ),
 #         generate_sequences = expand(
 #         "workflows/{dataset_name}/fasta/{dataset_name}_{rep}.fasta",
 #         dataset_name=ALL_DATASET_NAMES,
 #         rep=range(1, NUM_REPLICATES + 1)
 #         ),
 
-        interproscan_csv = expand("workflows/{dataset_name}/interproscan/{dataset_name}_{rep}.csv",
-                dataset_name=ALL_DATASET_NAMES,
-        rep=range(1, NUM_REPLICATES + 1),
-        ),
+
 
 
 rule generate_mutations:
     input:
-        fasta=DATASET_PATH + "{dataset_name}.fasta"
+        fasta=DATASET_PATH + "/{dataset_name}.fasta"
     output:
         generated_sequences="workflows/{dataset_name}/fasta/{dataset_name}_{rep}.fasta",
     script:
@@ -44,22 +45,21 @@ rule generate_mutations:
 
 rule run_interproscan:
     input:
-        generated_sequences="workflows/{dataset_name}/fasta/{dataset_name}_{rep}.fasta",
+        generated_sequences="workflows/{dataset_name}/fasta/{dataset_name}_{rep}.fasta"
     output:
-        interproscan_csv="workflows/{dataset_name}/interproscan/{dataset_name}_{rep}.csv",
+        interproscan_csv="workflows/{dataset_name}/interproscan/{dataset_name}_{rep}.csv"
+    params:
+        interproscan_dir=INTERPROSCAN_DIR
     shell:
         """
-        # Define the input and output for interproscan
-        INPUT_FASTA={input.generated_sequences}
-        OUTPUT_FILE="{INTERPROSCAN_DIR}/{wildcards.dataset_name}_{wildcards.rep}.tsv"
+        # Run interproscan with the provided input fasta and output tsv
+        {params.interproscan_dir}/interproscan.sh \
+        -i {input.generated_sequences} \
+        -f tsv -dp > {params.interproscan_dir}/{wildcards.dataset_name}_{wildcards.rep}.out
 
-        # Run interproscan
-        {INTERPROSCAN_DIR}/interproscan.sh -i {INPUT_FASTA} -f tsv -dp > {OUTPUT_FILE}.out
-
-        # Move the interproscan output to the final destination
-        mv {OUTPUT_FILE} {output.interproscan_csv}
+        # Move the generated .tsv file from interproscan_dir to the final output location
+        mv {params.interproscan_dir}/{wildcards.dataset_name}_{wildcards.rep}.tsv {output.interproscan_csv}
         """
-
 
 rule generate_embeddings:
     input:

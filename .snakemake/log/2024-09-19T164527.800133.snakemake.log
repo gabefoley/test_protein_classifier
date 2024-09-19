@@ -1,0 +1,28 @@
+Building DAG of jobs...
+Relative file path './data/NR4_NR1_ancestors.fasta' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './data/NR4_NR1_ancestors.fasta' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './data/NR4_NR1_ancestors.fasta' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Using shell: /bin/bash
+Provided cores: -1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count    min threads    max threads
+----------------  -------  -------------  -------------
+all                     1             -1              0
+run_interproscan        3             -1              0
+total                   4             -1              0
+
+Select jobs to execute...
+
+[Thu Sep 19 16:45:27 2024]
+rule run_interproscan:
+    input: workflows/NR4_NR1_ancestors/fasta/NR4_NR1_ancestors_3.fasta
+    output: workflows/NR4_NR1_ancestors/interproscan/NR4_NR1_ancestors_3.csv
+    jobid: 5
+    reason: Missing output files: workflows/NR4_NR1_ancestors/interproscan/NR4_NR1_ancestors_3.csv
+    wildcards: dataset_name=NR4_NR1_ancestors, rep=3
+    threads: -1
+    resources: tmpdir=/var/folders/xs/24s9hwqd191f2x7rhdy6_ryc0000gr/T
+
+RuleException in line 46 of /Users/uqgfoley/Dropbox/Code/Python_Workspace/protein_classifier/Snakefile:
+NameError: The name 'INPUT_FASTA' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}
