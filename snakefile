@@ -52,6 +52,7 @@ rule run_interproscan:
         """
         {params.interproscan_dir}/interproscan.sh \
         -i {input.generated_sequences} \
+        -appl Gene3D,PRINTS
         -f tsv -o {output.interproscan_csv}
         """
 
