@@ -66,7 +66,7 @@ rule run_interproscan:
         -dp \
         -i {input.generated_sequences} \
         -appl Gene3D,PRINTS \
-        -f tsv -o {output.interproscan_csv}
+        -f tsv -o {output.interproscan_df}
         """
 
 rule generate_embeddings:
