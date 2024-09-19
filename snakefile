@@ -21,11 +21,17 @@ except KeyError:
 
 rule all:
     input:
-        generate_sequences = expand(
-        "workflows/{dataset_name}/fasta/{dataset_name}_{rep}.fasta",
-        dataset_name=ALL_DATASET_NAMES,
-        rep=range(1, NUM_REPLICATES + 1)
+#         generate_sequences = expand(
+#         "workflows/{dataset_name}/fasta/{dataset_name}_{rep}.fasta",
+#         dataset_name=ALL_DATASET_NAMES,
+#         rep=range(1, NUM_REPLICATES + 1)
+#         ),
+
+        interproscan_csv = expand("workflows/{dataset_name}/interproscan/{dataset_name}_{rep}.csv",
+                dataset_name=ALL_DATASET_NAMES,
+        rep=range(1, NUM_REPLICATES + 1),
         ),
+
 
 rule generate_mutations:
     input:
