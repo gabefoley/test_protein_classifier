@@ -52,7 +52,7 @@ rule run_interproscan:
         """
         {params.interproscan_dir}/interproscan.sh \
         -i {input.generated_sequences} \
-        -f tsv -bp {output.interproscan_csv}
+        -f tsv -o {output.interproscan_csv}
         """
 
 rule generate_embeddings:
