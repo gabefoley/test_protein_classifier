@@ -87,7 +87,7 @@ def main():
 
     # Set model name and output paths
     bert_model_name = "yarongef/DistilProtBert"
-    bert_embedding_df_path = snakemake.output.embedding_csv
+    bert_embedding_df_path = snakemake.output.embedding_df
 
     # Process and store embeddings
     embedding_df = process_and_store_embeddings(df, bert_model_name, bert_embedding_df_path, model_type='protbert')

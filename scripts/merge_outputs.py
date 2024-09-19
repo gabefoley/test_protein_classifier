@@ -23,10 +23,10 @@ def load_interproscan_df(path):
 
 def main():
     # Load the dataframes
-    blast_df = pd.read_csv(snakemake.input.blast_csv)
+    blast_df = pd.read_csv(snakemake.input.blast_df)
     interproscan_df = load_interproscan_df(snakemake.input.interproscan_tsv)
 
-    with open(snakemake.input.embedding_csv, "rb") as input_file:
+    with open(snakemake.input.embedding_df, "rb") as input_file:
         embedding_df = pickle.load(input_file)
 
     merged_df = embedding_df.merge(interproscan_df, on='info', how='left')
@@ -44,8 +44,8 @@ def main():
     final_df['has_subfamily_4'] = final_df['PRINTS'].str.contains('subfamily 4', na=False)
     final_df['has_subfamily_1'] = final_df['PRINTS'].str.contains('subfamily 1', na=False)
 
-    # Save the merged dataframe to CSV
-    final_df.to_csv(snakemake.output.merged_csv, index=False)
+    # Save the merged dataframe
+    final_df.to_csv(snakemake.output.merged_df, index=False)
 
 
 if __name__ == "__main__":

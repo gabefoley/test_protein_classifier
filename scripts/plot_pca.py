@@ -48,7 +48,7 @@ def plot_pca(all_embeddings_df, nodes_to_label, outpath, col_name='protbert_cls_
 
 def main():
     # Load the df with the mutated sequences
-    with open(snakemake.input.embedding_csv, "rb") as input_file:
+    with open(snakemake.input.embedding_df, "rb") as input_file:
         embedding_df = pickle.load(input_file)
 
     nodes_to_label = embedding_df['info'].values
