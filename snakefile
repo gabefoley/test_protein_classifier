@@ -13,6 +13,12 @@ try:
 except KeyError:
     ALL_DATASET_NAMES = ['NR4_NR1_ancestors']
 
+try:
+    INTERPROSCAN_DIR = config['interproscan_dir']
+except KeyError:
+    INTERPROSCAN_DIR = '/media/WorkingSpace/Share/interproscan/interproscan-5.65-97.0/'
+
+
 rule all:
     input:
         generate_sequences = expand(
@@ -35,8 +41,18 @@ rule run_interproscan:
         generated_sequences="workflows/{dataset_name}/fasta/{dataset_name}_{rep}.fasta",
     output:
         interproscan_csv="workflows/{dataset_name}/interproscan/{dataset_name}_{rep}.csv",
-    script:
-        "scripts/generate_sequences.py"
+    shell:
+        """
+        # Define the input and output for interproscan
+        INPUT_FASTA={input.generated_sequences}
+        OUTPUT_FILE="{INTERPROSCAN_DIR}/{wildcards.dataset_name}_{wildcards.rep}.tsv"
+
+        # Run interproscan
+        {INTERPROSCAN_DIR}/interproscan.sh -i {INPUT_FASTA} -f tsv -dp > {OUTPUT_FILE}.out
+
+        # Move the interproscan output to the final destination
+        mv {OUTPUT_FILE} {output.interproscan_csv}
+        """
 
 
 rule generate_embeddings:
