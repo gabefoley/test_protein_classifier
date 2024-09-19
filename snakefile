@@ -32,8 +32,6 @@ rule all:
 #         ),
 
 
-
-
 rule generate_mutations:
     input:
         fasta=DATASET_PATH + "/{dataset_name}.fasta"

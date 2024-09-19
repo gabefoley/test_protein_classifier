@@ -2,7 +2,6 @@ from Bio import SeqIO
 from Bio.Seq import Seq, MutableSeq
 from Bio.SeqRecord import SeqRecord
 import random
-import snakemake
 
 
 def calculate_differences(seq1, seq2):

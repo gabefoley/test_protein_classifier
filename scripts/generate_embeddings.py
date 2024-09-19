@@ -2,7 +2,6 @@ import pandas as pd
 from transformers import AutoModel, AutoTokenizer
 import torch
 import utils
-import snakemake
 
 def calculate_embeddings(sequence, model, tokenizer, model_type):
     """Calculate various embeddings for a given sequence."""

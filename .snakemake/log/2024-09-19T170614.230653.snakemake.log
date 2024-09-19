@@ -1,0 +1,77 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: -1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+all                       1             -1              0
+generate_mutations        3             -1              0
+run_interproscan          3             -1              0
+total                     7             -1              0
+
+Select jobs to execute...
+
+[Thu Sep 19 17:06:14 2024]
+rule generate_mutations:
+    input: data/NR4_NR1_ancestors_unaligned.fasta
+    output: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_3.fasta
+    jobid: 6
+    reason: Missing output files: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_3.fasta
+    wildcards: dataset_name=NR4_NR1_ancestors_unaligned, rep=3
+    threads: -1
+    resources: tmpdir=/var/folders/xs/24s9hwqd191f2x7rhdy6_ryc0000gr/T
+
+[Thu Sep 19 17:06:14 2024]
+rule generate_mutations:
+    input: data/NR4_NR1_ancestors_unaligned.fasta
+    output: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_1.fasta
+    jobid: 2
+    reason: Missing output files: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_1.fasta
+    wildcards: dataset_name=NR4_NR1_ancestors_unaligned, rep=1
+    threads: -1
+    resources: tmpdir=/var/folders/xs/24s9hwqd191f2x7rhdy6_ryc0000gr/T
+
+[Thu Sep 19 17:06:14 2024]
+rule generate_mutations:
+    input: data/NR4_NR1_ancestors_unaligned.fasta
+    output: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_2.fasta
+    jobid: 4
+    reason: Missing output files: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_2.fasta
+    wildcards: dataset_name=NR4_NR1_ancestors_unaligned, rep=2
+    threads: -1
+    resources: tmpdir=/var/folders/xs/24s9hwqd191f2x7rhdy6_ryc0000gr/T
+
+[Thu Sep 19 17:06:15 2024]
+[Thu Sep 19 17:06:15 2024]
+Error in rule generate_mutations:
+    jobid: 2
+    output: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_1.fasta
+
+Error in rule generate_mutations:
+    jobid: 6
+    output: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_3.fasta
+
+RuleException:
+CalledProcessError in line 41 of /Users/uqgfoley/Dropbox/Code/Python_Workspace/protein_classifier/Snakefile:
+Command 'set -euo pipefail;  /Users/uqgfoley/opt/miniconda3/envs/asr_curation/bin/python3.9 /Users/uqgfoley/Dropbox/Code/Python_Workspace/protein_classifier/.snakemake/scripts/tmpjpyccetv.generate_mutations.py' returned non-zero exit status 1.
+  File "/Users/uqgfoley/Dropbox/Code/Python_Workspace/protein_classifier/Snakefile", line 41, in __rule_generate_mutations
+  File "/Users/uqgfoley/opt/miniconda3/envs/asr_curation/lib/python3.9/concurrent/futures/thread.py", line 58, in run
+RuleException:
+CalledProcessError in line 41 of /Users/uqgfoley/Dropbox/Code/Python_Workspace/protein_classifier/Snakefile:
+Command 'set -euo pipefail;  /Users/uqgfoley/opt/miniconda3/envs/asr_curation/bin/python3.9 /Users/uqgfoley/Dropbox/Code/Python_Workspace/protein_classifier/.snakemake/scripts/tmp227nmx5h.generate_mutations.py' returned non-zero exit status 1.
+  File "/Users/uqgfoley/Dropbox/Code/Python_Workspace/protein_classifier/Snakefile", line 41, in __rule_generate_mutations
+  File "/Users/uqgfoley/opt/miniconda3/envs/asr_curation/lib/python3.9/concurrent/futures/thread.py", line 58, in run
+[Thu Sep 19 17:06:15 2024]
+Error in rule generate_mutations:
+    jobid: 4
+    output: workflows/NR4_NR1_ancestors_unaligned/fasta/NR4_NR1_ancestors_unaligned_2.fasta
+
+RuleException:
+CalledProcessError in line 41 of /Users/uqgfoley/Dropbox/Code/Python_Workspace/protein_classifier/Snakefile:
+Command 'set -euo pipefail;  /Users/uqgfoley/opt/miniconda3/envs/asr_curation/bin/python3.9 /Users/uqgfoley/Dropbox/Code/Python_Workspace/protein_classifier/.snakemake/scripts/tmp027yqvf0.generate_mutations.py' returned non-zero exit status 1.
+  File "/Users/uqgfoley/Dropbox/Code/Python_Workspace/protein_classifier/Snakefile", line 41, in __rule_generate_mutations
+  File "/Users/uqgfoley/opt/miniconda3/envs/asr_curation/lib/python3.9/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-09-19T170614.230653.snakemake.log
