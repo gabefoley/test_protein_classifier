@@ -24,7 +24,7 @@ def load_interproscan_df(path):
 def main():
     # Load the dataframes
     blast_df = pd.read_csv(snakemake.input.blast_df)
-    interproscan_df = load_interproscan_df(snakemake.input.interproscan_tsv)
+    interproscan_df = load_interproscan_df(snakemake.input.interproscan_df)
 
     with open(snakemake.input.embedding_df, "rb") as input_file:
         embedding_df = pickle.load(input_file)
