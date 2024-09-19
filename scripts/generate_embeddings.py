@@ -47,7 +47,10 @@ def process_and_store_embeddings(df, model_name, embedding_df_path, model_type):
     if os.path.exists(embedding_df_path):
         embedding_df = pd.read_pickle(embedding_df_path)
     else:
+        print ('got to here')
         embedding_df = pd.DataFrame(columns=["info", "sequence", "model_name"])
+
+    print ('now done')
 
     for idx, row in df.iterrows():
         info = row["info"]
